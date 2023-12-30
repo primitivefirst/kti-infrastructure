@@ -1,15 +1,15 @@
 name: lab4
 services:
   nginx:
-  image: "nginx:1.25"
-  container_name: nginx
-  ports:
-    - "80:80"
-  volumes:
-    - ./conf:/etc/nginx/conf.d
-    - ./html:/usr/share/nginx/html
-  depends_on:
-    - flask
+    image: "nginx:1.25"
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./conf:/etc/nginx/conf.d
+      - ./html:/usr/share/nginx/html
+    depends_on:
+      - flask
 
   flask:
     # image: "aquaman/flask:1.0"
